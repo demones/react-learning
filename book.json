@@ -1,0 +1,42 @@
+{
+  "language" : "zh-hans",
+  "plugins": [
+      "disqus",
+      "-search",
+      "search-pro",
+      "emphasize",
+      "splitter",
+      "include-codeblock",
+      "tbfed-pagefooter",
+      "toggle-chapters",
+      "sectionx",
+      "prism",
+      "-highlight"
+  ],
+  "pluginsConfig": {
+      "disqus": {
+          "shortName": "gitbook"
+      },
+      "search-pro": {
+          "cutWordLib": "nodejieba",
+          "defineWord" : ["搜索"]
+      },
+      "sharing": {
+        "weibo": true,
+        "facebook": true,
+        "twitter": true,
+        "google": false,
+        "instapaper": false,
+        "vk": false,
+        "all": [
+            "facebook", "google", "twitter",
+                "weibo", "instapaper"
+        ]
+    },
+    "tbfed-pagefooter": {
+        "copyright":"Copyright &copy 2016",
+        "modify_label": "最后修改时间：",
+        "modify_format": "YYYY-MM-DD HH:mm:ss"
+    }
+  }
+}
