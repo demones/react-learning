@@ -162,8 +162,3 @@ export default connect(mapStateToProps, mapDispatchToProps)(PersonList);
     这个新的树就是应用的下一个 state！所有订阅 store.subscribe(listener) 的监听器都将被调用；监听器里可以调用 store.getState() 获得当前 state。
 
     现在，可以应用新的 state 来更新 UI。如果你使用了 React Redux 这类的绑定库，这时就应该调用 component.setState(newState) 来更新。
-
-# 参考资料
-
-* http://www.alloyteam.com/2015/09/react-redux/
-* https://segmentfault.com/a/1190000003503338?_ea=323420

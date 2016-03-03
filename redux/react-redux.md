@@ -3,9 +3,9 @@
 ## connect
 
 connect 是由 react-redux 提供， connect 实现了把传入的 mapStateToProps 和 mapDispatchToProps进行预处理后，返回组件 Connect，
-然后再调用该组件，并把用户定义的 react Component 传入。在 Connect 组件中把 stateProps 和 actionProps处理后合并后作为props传给用户定义的组件，这样用户定义的组件就可以直接调用使用 props 了，里面的数据处理完全交由 Connect。
+然后再调用该组件，并把用户定义的 react Component 传入。在 Connect 组件中把 stateProps 和 actionProps处理合并后作为 props 传给用户定义的组件，这样用户定义的组件就可以直接调用使用 props 了，里面的数据处理完全交由 Connect。
 
-一个从 connect() 包装好的组件可以得到一个 dispatch 方法作为组件的 props，以及得到全局 state 中所需的任何内容。 connect() 的唯一参数是 selector。此方法可以从 Redux store 接收到全局的 state，然后返回组件中需要的 props。最简单的情况下，可以返回一个初始的 state （例如，返回认证方法），但最好先将其进行转化。
+一个从 connect() 包装好的组件可以得到一个 dispatch 方法作为组件的 props，以及得到全局 state 中所需的任何内容。 调用connect() 返回的函数唯一参数是 Component， Redux store 接收到全局的 state，然后返回组件中需要的 props。最简单的情况下，可以返回一个初始的 state，但最好先将其进行转化。
 
 例子
 

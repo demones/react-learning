@@ -2,11 +2,11 @@
 
 * Redux 主要包含三部分 Action、Reducer 及 Store。
 * 通过 redux 提供的 bindActionCreators 把 actions 与 dispatch 关联
-* 通过 redux 提供的 createStore 并传入 reduces 来生成 store，store 中包含了 dispatch。`createStore(reducer, initialState)`
-* 这样通过生成的 dispatch 间接的把 actions 和 reduces 关联起来了
+* 通过 redux 提供的 createStore 并传入 reducers 来生成 store，store 中包含了 dispatch。`createStore(reducer, initialState)`
+* 这样通过生成的 dispatch 间接的把 actions 和 reducers 关联起来了
 * react-redux 是通过 Provider 和 connect 把 React 与 Redux 关联起来
 * Provider 注入了 store 对象，并且利用 context 使子组件能够调用 store
-* connect 把 actions 和 stateProps 传入，并创建新的 Connect 组件，该组件包裹了用户定义的组件。在 Connect 组件中利用 Provider 传入的     store 来处理 actions 和 stateProps，并最终转换为 react props 传递到用户自定义组件中，在用户自定义组件中就能调用 actions 和 stateProps  了。
+* connect 把 actionsProps 和 stateProps 传入，并创建新的 Connect 组件，该组件包裹了用户定义的组件。在 Connect 组件中利用 Provider 传入的 store 来处理 actionsProps 和 stateProps，并最终转换为 react props 传递到用户自定义组件中，在用户自定义组件中就能调用 actions 和 stateProps  了。
 
 React Redux 核心部分与代码目录组织结构图
 
@@ -41,7 +41,8 @@ export function filterSave(person) {
   };
 }
 ```
-由于 filterSave 返回的是一个函数，在 createStore 中 dispatch(action) 传入的参数需要是一个包含 type 属性的对象 action，
+由于 filterSave 返回的是一个函数，
+{% em color="#f1396d" %}而在 createStore 中 dispatch(action) 传入的参数必须是一个包含 type 属性的对象 action{% endem %}，
 所以这时需要通过中间件来创建生成 store。
 
 ## Reducer
@@ -133,7 +134,7 @@ Action 用来表达操作的行为，Reducer 根据 Action 来更新 State。Sto
 * getState() // 返回 state
 * replaceReducer(reducer) // 替换 reducer
 
-Redux 应用只有一个单一的 store。当需要拆分处理数据的逻辑时，使用 reducer 组合 而不是创建多个 store。
+Redux 应用只有一个单一的 store。当需要拆分处理数据的逻辑时，使用 reducer 组合而不是创建多个 store。
 
 store 是通过调用 `createStore(reducer, initialState);` 来创建的，对于异步等操作，我们需要通过中间件来创建
 
