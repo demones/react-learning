@@ -6,4 +6,6 @@
  - [搭配 React react-redux](redux/react-redux.md)
  - [Redux 数据流](redux/dataflow.md)
  - [异步 Action](redux/asyncActions.md)
+ - [normalizr](redux/normalizr.md)
+* [react-router](router/README.md)
 * [Traft.js-React 富文本编辑器](traft/RADME.md)
