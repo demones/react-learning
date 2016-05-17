@@ -3,6 +3,7 @@ node_modules
 npm-debug.log
 
 # Book build output
+_book
 
 # eBook build output
 *.epub

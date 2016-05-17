@@ -1,0 +1,443 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book react-learning -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>搭配 React react-redux | react-learning</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-disqus/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search-pro/search-pro.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-emphasize/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-tbfed-pagefooter/footer.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-sectionx/sectionx.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../redux/dataflow.html" />
+    
+    
+    <link rel="prev" href="../redux/redux.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="2.2"
+        data-chapter-title="搭配 React react-redux"
+        data-filepath="redux/react-redux.md"
+        data-basepath=".."
+        data-revision="Thu Mar 03 2016 15:39:36 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="reference/index.html">
+            
+                
+                    <a href="../reference/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        相关参考
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="redux/index.html">
+            
+                
+                    <a href="../redux/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Redux
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="redux/redux.html">
+            
+                
+                    <a href="../redux/redux.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Redux 基础
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="redux/react-redux.html">
+            
+                
+                    <a href="../redux/react-redux.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        搭配 React react-redux
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="redux/dataflow.html">
+            
+                
+                    <a href="../redux/dataflow.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Redux 数据流
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="redux/asyncActions.html">
+            
+                
+                    <a href="../redux/asyncActions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        异步 Action
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="traft/RADME.html">
+            
+            <span><b>3.</b> Traft.js-React 富文本编辑器</span>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >react-learning</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="react-&#x4E0E;-redux-&#x5173;&#x8054;&#x4E4B;-reactredux">react &#x4E0E; redux &#x5173;&#x8054;&#x4E4B; react-redux</h1>
+<h2 id="connect">connect</h2>
+<p>connect &#x662F;&#x7531; react-redux &#x63D0;&#x4F9B;&#xFF0C; connect &#x5B9E;&#x73B0;&#x4E86;&#x628A;&#x4F20;&#x5165;&#x7684; mapStateToProps &#x548C; mapDispatchToProps&#x8FDB;&#x884C;&#x9884;&#x5904;&#x7406;&#x540E;&#xFF0C;&#x8FD4;&#x56DE;&#x7EC4;&#x4EF6; Connect&#xFF0C;
+&#x7136;&#x540E;&#x518D;&#x8C03;&#x7528;&#x8BE5;&#x7EC4;&#x4EF6;&#xFF0C;&#x5E76;&#x628A;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x7684; react Component &#x4F20;&#x5165;&#x3002;&#x5728; Connect &#x7EC4;&#x4EF6;&#x4E2D;&#x628A; stateProps &#x548C; actionProps&#x5904;&#x7406;&#x5408;&#x5E76;&#x540E;&#x4F5C;&#x4E3A; props &#x4F20;&#x7ED9;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x8FD9;&#x6837;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x7684;&#x7EC4;&#x4EF6;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x4F7F;&#x7528; props &#x4E86;&#xFF0C;&#x91CC;&#x9762;&#x7684;&#x6570;&#x636E;&#x5904;&#x7406;&#x5B8C;&#x5168;&#x4EA4;&#x7531; Connect&#x3002;</p>
+<p>&#x4E00;&#x4E2A;&#x4ECE; connect() &#x5305;&#x88C5;&#x597D;&#x7684;&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x4E00;&#x4E2A; dispatch &#x65B9;&#x6CD5;&#x4F5C;&#x4E3A;&#x7EC4;&#x4EF6;&#x7684; props&#xFF0C;&#x4EE5;&#x53CA;&#x5F97;&#x5230;&#x5168;&#x5C40; state &#x4E2D;&#x6240;&#x9700;&#x7684;&#x4EFB;&#x4F55;&#x5185;&#x5BB9;&#x3002; &#x8C03;&#x7528;connect() &#x8FD4;&#x56DE;&#x7684;&#x51FD;&#x6570;&#x552F;&#x4E00;&#x53C2;&#x6570;&#x662F; Component&#xFF0C; Redux store &#x63A5;&#x6536;&#x5230;&#x5168;&#x5C40;&#x7684; state&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x7EC4;&#x4EF6;&#x4E2D;&#x9700;&#x8981;&#x7684; props&#x3002;&#x6700;&#x7B80;&#x5355;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x521D;&#x59CB;&#x7684; state&#xFF0C;&#x4F46;&#x6700;&#x597D;&#x5148;&#x5C06;&#x5176;&#x8FDB;&#x884C;&#x8F6C;&#x5316;&#x3002;</p>
+<p>&#x4F8B;&#x5B50;</p>
+<pre><code class="lang-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span>bindActionCreators<span class="token punctuation">}</span> from <span class="token string">&apos;redux&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>connect<span class="token punctuation">}</span> from <span class="token string">&apos;react-redux&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token operator">*</span> as Actions from <span class="token string">&apos;../actions&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> PersonList from <span class="token string">&apos;../components/PersonList&apos;</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">/**
+ * &#x521B;&#x5EFA;&#x7684; reducer &#x65F6;&#xFF0C;&#x5229;&#x7528; combineReducers &#x4F20;&#x5165;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5728;&#x8C03;&#x7528; createStore &#x751F;&#x6210; store &#x65F6;
+ * &#x4F1A;&#x751F;&#x6210;&#x4E0E; combineReducers &#x4F20;&#x5165;&#x7684;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x540D;&#x4E00;&#x6837;&#x7684; state &#x5BF9;&#x8C61;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;
+ * &#x8FD9;&#x4E5F;&#x8BF4;&#x660E;&#x4E86; state &#x4E2D;&#x5B58;&#x5728;&#x7684;&#x5C5E;&#x6027;&#x5FC5;&#x987B;&#x5728; combineReducers &#x4F20;&#x5165;&#x7684;&#x5BF9;&#x8C61;&#x5148;&#x5B9A;&#x4E49;
+ * @param state
+ * @returns {{persons: *, filter: *}}
+ */</span>
+<span class="token keyword">function</span> <span class="token function">mapStateToProps</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    persons<span class="token punctuation">:</span> state<span class="token punctuation">.</span>persons<span class="token punctuation">,</span>
+    filter<span class="token punctuation">:</span> state<span class="token punctuation">.</span>filter
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/**
+ * &#x5728; connect &#x521B;&#x5EFA;&#x7684;&#x7EC4;&#x4EF6; Connect &#x4E2D;&#x8C03;&#x7528; mapDispatchToProps&#x65F6;&#xFF0C;
+ * &#x901A;&#x8FC7;&#x8C03;&#x7528; bindActionCreators&#xFF0C;&#x5728; mapValues &#x4E2D;&#x5904;&#x7406;&#xFF0C;&#x628A;&#x6240;&#x6709;&#x7684; actions &#x5373;&#x672C;&#x4F8B;&#x4E2D;&#x7684; Actions
+ * &#x8F6C;&#x6362;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5BF9;&#x8C61;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x6240;&#x6709;&#x7684; actions&#xFF0C;&#x672C;&#x4F8B;&#x4E2D;&#x683C;&#x5F0F;&#x5982;&#x4E0B;
+ {
+   editPerson: function () {
+     return dispatch(actionCreator.apply(undefined, arguments))
+   }
+   ...
+ }
+ &#x5F53;&#x8C03;&#x7528; editPerson(person) &#x65F6;&#xFF0C;&#x4F1A;&#x8FD4;&#x56DE;
+ dispatch(actionCreator.apply(undefined, arguments))
+ actionCreator &#x5373;&#x4E3A;&#x5728; actions/index.js &#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5982;&#x4E0B;
+ export function editPerson(person) {
+    return {
+      type: ActionTypes.EDIT_PERSON,
+      person
+    };
+  }
+  &#x6240;&#x4EE5;&#x6700;&#x7EC8;&#x4F1A;&#x6267;&#x884C;dispatch&#xFF0C;&#x5E76;&#x628A;&#x65B0;&#x7684; state &#x8FD4;&#x56DE;
+ dispatch({
+      type: ActionTypes.EDIT_PERSON,
+      person
+ })
+ &#x5728; dispatch &#x4E2D;&#x4F1A;&#x8C03;&#x7528;&#x5BF9;&#x5E94;&#x7684; reducer&#xFF0C;&#x672C;&#x4F8B;&#x5B50;&#x4E3A; reducers/persons.js &#x4E2D;&#x7684;
+ export default function personsReducer(state = initState, action) {}
+ bindActionCreators(Actions, dispatch) &#x4F1A;&#x8F6C;&#x6362;&#x6210; actions &#x7EC4;&#x6210;&#x7684;&#x5BF9;&#x8C61;&#x96C6;
+ * @param dispatch
+ * @returns {{actions: *}}
+ */</span>
+<span class="token keyword">function</span> <span class="token function">mapDispatchToProps</span><span class="token punctuation">(</span>dispatch<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">//return bindActionCreators(Actions, dispatch);</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    actions<span class="token punctuation">:</span> <span class="token function">bindActionCreators</span><span class="token punctuation">(</span>Actions<span class="token punctuation">,</span> dispatch<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    dispatch <span class="token comment" spellcheck="true">//&#x628A; dispatch &#x66B4;&#x9732;&#x7ED9; props&#xFF0C;&#x5BF9;&#x4E8E;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x5728; props &#x4E2D;&#x4F7F;&#x7528; dispatch&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x4E00;&#x4E0B;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// &#x5982;&#x679C;&#x4E0D;&#x4F20;&#x5165; mapDispatchToProps &#xFF0C;&#x4F1A;&#x7528;&#x9ED8;&#x8BA4;&#x7684;&#x51FD;&#x6570;</span>
+<span class="token comment" spellcheck="true">// const defaultMapDispatchToProps = dispatch =&gt; ({ dispatch })</span>
+<span class="token comment" spellcheck="true">// &#x9ED8;&#x8BA4;&#x7684;&#x51FD;&#x6570;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x4E86; dispatch</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">connect</span><span class="token punctuation">(</span>mapStateToProps<span class="token punctuation">,</span> mapDispatchToProps<span class="token punctuation">)</span><span class="token punctuation">(</span>PersonList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x7ED9;&#x51FA;&#x5176;&#x6E90;&#x7801;&#x5B9E;&#x73B0;</p>
+<blockquote>
+<p><a name="connect.js" href="../codes/redux/connect.js">connect.js</a></p>
+</blockquote>
+<pre><code class="lang-javascript"><span class="token keyword">const</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> createElement <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;react&apos;</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// store &#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x5305;&#x62EC; subscribe dispatch &#x548C; getState</span>
+<span class="token keyword">const</span> storeShape <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;../utils/storeShape&apos;</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// &#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x662F;&#x5426;&#x76F8;&#x7B49;&#xFF0C;&#x53EA;&#x8981; OwnProperty &#x4E2A;&#x6570;&#x76F8;&#x7B49;&#xFF0C;&#x5E76;&#x4E14;&#x5C5E;&#x6027;&#x503C;&#x4E5F;&#x76F8;&#x7B49;&#xFF0C;&#x5219;&#x8BA4;&#x4E3A;&#x8FD9;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x76F8;&#x7B49;</span>
+<span class="token keyword">const</span> shallowEqual <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;../utils/shallowEqual&apos;</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// &#x662F;&#x5426;&#x4E3A;&#x6241;&#x5E73;&#x5BF9;&#x8C61;</span>
+<span class="token keyword">const</span> isPlainObject <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;../utils/isPlainObject&apos;</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// &#x7528; bindActionCreators(actionCreators, dispatch) &#x5904;&#x7406; action &#x548C; dispatch</span>
+<span class="token keyword">const</span> wrapActionCreators <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;../utils/wrapActionCreators&apos;</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// &#x628A; React &#x4E2D; &#x5B69;&#x5B50;&#x7EC4;&#x4EF6;&#x9759;&#x6001;&#x5C5E;&#x6027;&#x590D;&#x5236;&#x5230;&#x7236;&#x7EC4;&#x4EF6;&#x9759;&#x6001;&#x5C5E;&#x6027;&#x4E2D;&#xFF08;&#x4E0D;&#x5305;&#x62EC; react &#x7279;&#x6709;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x6BD4;&#x5982; displayName &#x7B49;&#xFF09;</span>
+<span class="token keyword">const</span> hoistStatics <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;hoist-non-react-statics&apos;</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// &#x7528;&#x6765;&#x683C;&#x5F0F;&#x5316;&#x9519;&#x8BEF;&#x4FE1;&#x606F;</span>
+<span class="token keyword">const</span> invariant <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;invariant&apos;</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// &#x9ED8;&#x8BA4; state &#x4E0E; prop &#x5173;&#x8054;&#x51FD;&#x6570;</span>
+<span class="token keyword">const</span> defaultMapStateToProps <span class="token operator">=</span> state <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// eslint-disable-line no-unused-vars</span>
+</code></pre>
+<p>&#x5728;&#x8C03;&#x7528; connect &#x4F20;&#x5165; mapDispatchToProps &#x6211;&#x4EEC;&#x7528;&#x5230;&#x4E86; bindActionCreators&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x7684;&#x529F;&#x80FD;&#x662F;&#x628A; Actions &#x89E3;&#x6790;&#x6210;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8C03;&#x7528; dispatch &#x7684;&#x51FD;&#x6570;&#xFF0C;&#x6BD4;&#x5982; actions &#x4E2D;&#x7684;&#x65B9;&#x6CD5; addPerson &#x4F1A;&#x88AB;&#x89E3;&#x6790;&#x4E3A; <code>dispatch(addPerson(person))</code> &#x3002;&#x8FD9;&#x6837;&#x5C31;&#x80FD;&#x8C03;&#x7528; props &#x4E2D;&#x7684; action &#x65B9;&#x6CD5;&#xFF0C;&#x91CD;&#x65B0;&#x83B7;&#x53D6;&#x6700;&#x65B0;&#x7684; state &#x4E86;&#xFF0C;&#x6E90;&#x7801;&#x5B9E;&#x73B0;&#x4E3A;</p>
+<blockquote>
+<p><a name="bindActionCreators.js" href="../codes/redux/bindActionCreators.js">bindActionCreators.js</a></p>
+</blockquote>
+<pre><code class="lang-javascript"><span class="token keyword">function</span> <span class="token function">bindActionCreator</span><span class="token punctuation">(</span>actionCreator<span class="token punctuation">,</span> dispatch<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>args<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">actionCreator</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>args<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token operator">/</span><span class="token operator">*</span><span class="token operator">*</span>
+ <span class="token operator">*</span> Turns an object whose values are action creators<span class="token punctuation">,</span> into an object <span class="token keyword">with</span> the
+ <span class="token operator">*</span> same keys<span class="token punctuation">,</span> but <span class="token keyword">with</span> every <span class="token keyword">function</span> wrapped into a `dispatch` call so they
+ <span class="token operator">*</span> may be invoked directly<span class="token punctuation">.</span> This is just a convenience method<span class="token punctuation">,</span> as you can call
+ <span class="token operator">*</span> `store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span>MyActionCreators<span class="token punctuation">.</span><span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>` yourself just fine<span class="token punctuation">.</span>
+ <span class="token operator">*</span>
+ <span class="token operator">*</span> For convenience<span class="token punctuation">,</span> you can also pass a single <span class="token keyword">function</span> as the first argument<span class="token punctuation">,</span>
+ <span class="token operator">*</span> and <span class="token keyword">get</span> a <span class="token keyword">function</span> <span class="token keyword">in</span> <span class="token keyword">return</span><span class="token punctuation">.</span>
+ <span class="token operator">*</span>
+ <span class="token operator">*</span> @param <span class="token punctuation">{</span>Function<span class="token operator">|</span>Object<span class="token punctuation">}</span> actionCreators An object whose values are action
+ <span class="token operator">*</span> creator functions<span class="token punctuation">.</span> One handy way to obtain it is to use ES6 `<span class="token keyword">import</span> <span class="token operator">*</span> as`
+</code></pre>
+<h2 id="provider">Provider</h2>
+<p>Provider &#x662F;&#x7531; react-redux &#x63D0;&#x4F9B;&#xFF0C;&#x7EE7;&#x627F;&#x4E86; react &#x7EC4;&#x4EF6;&#xFF08;React.Component&#xFF09;&#xFF0C;&#x5185;&#x90E8;&#x5B9E;&#x73B0;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x4E3B;&#x8981;&#x5904;&#x7406;&#x4E86; store&#x3002;
+&#x6211;&#x4EEC;&#x77E5;&#x9053;&#xFF0C;Connect &#x7EC4;&#x4EF6;&#x9700;&#x8981; store&#xFF0C;&#x6240;&#x4EE5;&#x7EC4;&#x4EF6; Provider &#x4E3A;&#x5176;&#x6CE8;&#x5165;&#x4E86; store&#xFF0C;&#x4F7F;&#x5F97;&#x5176;&#x5B50;&#x7EC4;&#x4EF6;&#x80FD;&#x591F;&#x5728;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x4F7F;&#x7528; store &#x5BF9;&#x8C61;&#xFF0C;
+&#x6700;&#x65B0;&#x7248;&#x672C;&#x4E2D;&#xFF0C;&#x4E0D;&#x5141;&#x8BB8;&#x52A8;&#x6001;&#x7684;&#x4FEE;&#x6539; store&#x3002;</p>
+<p>store &#x7684;&#x6570;&#x636E;&#x4F20;&#x9012;&#xFF0C;Provider &#x5185;&#x90E8;&#x662F;&#x901A;&#x8FC7; react context &#x6765;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x5229;&#x7528;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#xFF0C;&#x628A; store &#x4F20;&#x7ED9;&#x5B50;&#x7EC4;&#x4EF6;&#x3002;context &#x7684;&#x5B9E;&#x73B0;&#x66F4;&#x50CF;&#x662F;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x8FD9;&#x6837;&#x5B50;&#x7EC4;&#x4EF6;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528; store &#x4E86;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="token keyword">class</span> <span class="token class-name">Provider</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">getChildContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span> store<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>store <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+Provider<span class="token punctuation">.</span>childContextTypes <span class="token operator">=</span> <span class="token punctuation">{</span>
+  store<span class="token punctuation">:</span> storeShape<span class="token punctuation">.</span>isRequired
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5173;&#x4E8E;&#x66F4;&#x591A; context &#x7684;&#x4FE1;&#x606F;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="https://facebook.github.io/react/docs/context.html" target="_blank">&#x8FD9;&#x91CC;</a></p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; 2016 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2016-03-03 15:32:34
+</span></footer>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../redux/redux.html" class="navigation navigation-prev " aria-label="Previous page: Redux 基础"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../redux/dataflow.html" class="navigation navigation-next " aria-label="Next page: Redux 数据流"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-disqus/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search-pro/search-pro.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sectionx/sectionx.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"disqus":{"shortName":"gitbook","useIdentifier":false},"search-pro":{"cutWordLib":"nodejieba","defineWord":["搜索"]},"sharing":{"weibo":true,"facebook":true,"twitter":true,"google":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"tbfed-pagefooter":{"copyright":"Copyright &copy 2016","modify_label":"最后修改时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"emphasize":{},"splitter":{},"include-codeblock":{},"toggle-chapters":{},"sectionx":{},"prism":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book react-learning -->
+</html>
