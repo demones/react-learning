@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Redux | react-learning</title>
+        <title>react-router | react-learning</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -65,10 +65,8 @@
         
     
     
-    <link rel="next" href="../redux/redux.html" />
     
-    
-    <link rel="prev" href="../reference/index.html" />
+    <link rel="prev" href="../redux/normalizr.html" />
     
 
         <!-- head:end -->
@@ -77,9 +75,9 @@
         <!-- body:start -->
         
     <div class="book"
-        data-level="2"
-        data-chapter-title="Redux"
-        data-filepath="redux/README.md"
+        data-level="3"
+        data-chapter-title="react-router"
+        data-filepath="router/README.md"
         data-basepath=".."
         data-revision="Tue May 17 2016 10:48:45 GMT+0800 (CST)"
         data-innerlanguage="">
@@ -125,7 +123,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2" data-path="redux/index.html">
+        <li class="chapter " data-level="2" data-path="redux/index.html">
             
                 
                     <a href="../redux/index.html">
@@ -221,7 +219,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3" data-path="router/index.html">
+        <li class="chapter active" data-level="3" data-path="router/index.html">
             
                 
                     <a href="../router/index.html">
@@ -276,13 +274,29 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="redux-&#x6570;&#x636E;&#x6D41;">Redux &#x6570;&#x636E;&#x6D41;</h1>
-<h2 id="&#x5B66;&#x4E60;&#x53C2;&#x8003;">&#x5B66;&#x4E60;&#x53C2;&#x8003;</h2>
+                        <h1 id="react-router-&#x5B66;&#x4E60;">React Router &#x5B66;&#x4E60;</h1>
+<h1 id="&#x77E5;&#x8BC6;&#x70B9;">&#x77E5;&#x8BC6;&#x70B9;</h1>
 <ul>
-<li><a href="http://redux.js.org/" target="_blank">&#x5B98;&#x7F51;</a></li>
-<li><a href="http://cn.redux.js.org/" target="_blank">&#x4E2D;&#x6587;&#x5B98;&#x7F51;</a></li>
-<li><a href="http://www.alloyteam.com/2015/09/react-redux/" target="_blank">http://www.alloyteam.com/2015/09/react-redux/</a></li>
-<li><a href="https://segmentfault.com/a/1190000003503338?_ea=323420" target="_blank">https://segmentfault.com/a/1190000003503338?_ea=323420</a></li>
+<li><p>&#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528; router</p>
+<pre><code class="lang-javascript"><span class="token keyword">class</span> <span class="token class-name">Detail</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+
+  <span class="token function">constructor</span><span class="token punctuation">(</span>props<span class="token punctuation">,</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">,</span> context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>context<span class="token punctuation">.</span>router<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token function">toOtherRouter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>context<span class="token punctuation">.</span>router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">&apos;./path&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+Detail<span class="token punctuation">.</span>contextTypes <span class="token operator">=</span> <span class="token punctuation">{</span>
+  router<span class="token punctuation">:</span> PropTypes<span class="token punctuation">.</span>object<span class="token punctuation">.</span>isRequired
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul>
+<h1 id="&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599;</h1>
+<ul>
+<li><a href="https://github.com/reactjs/react-router/blob/v2.0.0/upgrade-guides/v2.0.0.md?utm_source=tuicool&amp;utm_medium=referral" target="_blank">react-router 2.x &#x5347;&#x7EA7;&#x6307;&#x5357;</a></li>
 </ul>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 2016 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
 2016-05-17 10:44:46
@@ -296,10 +310,8 @@
         </div>
 
         
-        <a href="../reference/index.html" class="navigation navigation-prev " aria-label="Previous page: 相关参考"><i class="fa fa-angle-left"></i></a>
+        <a href="../redux/normalizr.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: normalizr"><i class="fa fa-angle-left"></i></a>
         
-        
-        <a href="../redux/redux.html" class="navigation navigation-next " aria-label="Next page: Redux 基础"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
